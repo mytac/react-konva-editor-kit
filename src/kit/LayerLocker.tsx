@@ -6,11 +6,11 @@ import {
     LockFilled,
     UnlockFilled,
 } from '@ant-design/icons'
+import { isNumber } from 'lodash'
 import { Tooltip } from 'antd'
 import { FontSvg, ShopBag } from '../icons'
 
 import { LayerLockerWrapper } from './style'
-import { isNumber } from 'lodash'
 
 const LayerLocker: FC<{
     layers: any[]
