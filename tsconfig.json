@@ -1,0 +1,22 @@
+{
+    "compilerOptions": {
+        "target": "es5",
+        "module": "es6",
+        "lib": ["dom", "dom.iterable", "esnext"],
+        "outDir": "./dist",
+        "declaration": true,
+        "declarationMap": true,
+        "emitDeclarationOnly": false,
+        "esModuleInterop": true,
+        "moduleResolution": "node",
+        "isolatedModules": true,
+        "jsx": "react-jsx",
+        "noImplicitAny": true,
+        "strictNullChecks": true,
+        "removeComments": true,
+        "allowSyntheticDefaultImports": true
+    },
+    "include": ["./src/**/*"],
+    "typeRoots": ["node_modules/@types", "src/types"],
+    "exclude": ["node_modules", "dist"]
+}

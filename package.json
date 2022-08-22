@@ -9,6 +9,19 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "react": "^18.2.0"
+    "antd": "^4.22.7",
+    "konva": "8.2.3",
+    "lodash": "^4.17.21",
+    "react": "^18.2.0",
+    "react-color": "^2.19.3",
+    "react-image-crop": "^10.0.6",
+    "styled-components": "^5.3.5",
+    "use-image": "^1.0.12"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.184",
+    "@types/react": "^18.0.17",
+    "@types/react-color": "^3.0.6",
+    "@types/styled-components": "^5.1.26"
   }
 }
