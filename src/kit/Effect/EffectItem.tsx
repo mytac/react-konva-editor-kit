@@ -1,7 +1,7 @@
 import { FC } from 'react'
 import { StopOutlined } from '@ant-design/icons'
 import { cssTransform } from './transform'
-import imgIcon from '../image/image-icon.png'
+// import imgIcon from '../image/image-icon.png'
 import { EffectItemWrapper } from '../style'
 import { EffectItemProps } from './type'
 
@@ -21,7 +21,7 @@ const EffectItem: FC<EffectItemProps> = ({ title, renderType, ...props }) => {
                     ) : (
                         <img
                             className="image"
-                            src={imgIcon}
+                            src="https://s1.ax1x.com/2023/02/24/pSzeeaj.png"
                             style={style}
                             alt=""
                         />

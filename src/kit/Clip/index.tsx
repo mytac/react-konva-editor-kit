@@ -5,7 +5,7 @@ import 'react-image-crop/dist/ReactCrop.css'
 import useImage from 'use-image'
 import { to2Decimal, numbericalObjectValues } from '../../utils'
 import { realCropToShowCrop, showCropToRealCrop } from './handleDefaultCrop'
-import back from '../../image/back.png'
+// import back from './back.png'
 import { Wrapper, RightCol } from './style'
 
 export interface ICrop extends Crop {
@@ -119,7 +119,9 @@ const Clip: FC<IClip> = ({
             <Wrapper>
                 <div
                     className="left"
-                    style={{ backgroundImage: `url(${back})` }}
+                    style={{
+                        backgroundImage: `url(https://s1.ax1x.com/2023/02/24/pSzeixf.png)`,
+                    }}
                 >
                     <ReactCrop
                         className="crop"
