@@ -1,6 +1,6 @@
 import { isNumber } from 'lodash'
 import { FC, useState, useEffect, useCallback } from 'react'
-import { Input } from 'antd'
+import { Input } from '../third-part'
 import { debounce } from 'lodash'
 import { Wrapper } from './style'
 
@@ -58,8 +58,8 @@ const PositionLocker: FC<{
                     />
                 </div>
                 {/* <div className="position-row">
-          <Input suffix="W" value={w} onChange={(e) => onChange(e, 'w')} />
-          <Input suffix="H" value={h} onChange={(e) => onChange(e, 'h')} />
+          <YHInput suffix="W" value={w} onChange={(e) => onChange(e, 'w')} />
+          <YHInput suffix="H" value={h} onChange={(e) => onChange(e, 'h')} />
         </div> */}
             </div>
         </Wrapper>

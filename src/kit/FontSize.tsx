@@ -1,5 +1,5 @@
 import { FC, useEffect, useState, useCallback } from 'react'
-import { Input } from 'antd'
+import { Input } from '../third-part'
 import { debounce } from 'lodash'
 
 import { Wrapper } from './style'

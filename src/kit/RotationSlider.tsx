@@ -1,8 +1,8 @@
 import { FC, useState, useEffect, useCallback } from 'react'
-import { Slider, Input } from 'antd'
+import { Wrapper } from './style'
+import { Slider, Input } from '../third-part'
 import Konva from 'konva'
 import { debounce } from 'lodash'
-import { Wrapper } from './style'
 
 const rotatePoint = (position: any, rad: number) => {
     const { x, y } = position

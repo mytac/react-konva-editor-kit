@@ -1,4 +1,5 @@
 import { FC, useEffect, useState } from 'react'
+// import { IimageInfo, ItextInfo } from 'react-konva-editor'
 import {
     PictureOutlined,
     ArrowUpOutlined,
@@ -6,14 +7,17 @@ import {
     LockFilled,
     UnlockFilled,
 } from '@ant-design/icons'
-import { isNumber } from 'lodash'
-import { Tooltip } from 'antd'
+import { Tooltip } from '../third-part'
 import { FontSvg, ShopBag } from '../icons'
 
 import { LayerLockerWrapper } from './style'
+import { isNumber } from 'lodash'
+
+// type LayerType = IimageInfo | ItextInfo;
+type LayerType = any
 
 const LayerLocker: FC<{
-    layers: any[]
+    layers: LayerType[]
     onMoveUp?: () => void
     onMoveDown?: () => void
     onLock?: (i: number) => void

@@ -1,5 +1,4 @@
 import { isObject } from 'lodash'
-
 const reactColor2Hex = (c: any) => {
     if (c.hex === 'transparent') return c.hex
     const alpha = c.rgb.a.toFixed(1)
@@ -11,7 +10,6 @@ const reactColor2Hex = (c: any) => {
 
 // 保留两位小数
 const to2Decimal = (n: number) => {
-    //@ts-ignore
     return Math.round(n)
 }
 
@@ -22,10 +20,8 @@ const numbericalObjectValues = (obj: any) => {
     }
     const keys = Object.keys(obj)
     keys.forEach((key) => {
-        //@ts-ignore
         const current = obj[key]
         if (!isNaN(current)) {
-            //@ts-ignore
             obj[key] = Number(current)
         }
     })

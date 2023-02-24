@@ -1,6 +1,6 @@
 import { FC, useState, useEffect, useCallback } from 'react'
 import { Wrapper } from './style'
-import { Slider, Input } from 'antd'
+import { Slider, Input } from '../third-part'
 import { debounce } from 'lodash'
 
 const OpacitySlider: FC<{

@@ -1,5 +1,5 @@
 import { FC, useRef, useState } from 'react'
-import { Button } from 'antd'
+import { Button } from '../third-part'
 import ClipModal, { ICrop } from './Clip'
 import { Wrapper } from './style'
 // import bgSvg from './png-bg.svg';
@@ -7,11 +7,12 @@ import { Wrapper } from './style'
 const PicChanger: FC<{
     url: string
     format: string
+    onPick?: () => void
     onClickChange: () => void
     onChangeCrop: (a: any) => void
     onUpload?: (p: { files: File[]; values: any }) => void
     crop?: ICrop
-}> = ({ onClickChange, url, format, onUpload, onChangeCrop, crop }) => {
+}> = ({ onClickChange, url, format, onUpload, onChangeCrop, crop, onPick }) => {
     const [clipVisible, setClipVisible] = useState<boolean>(false)
     const ref = useRef<HTMLInputElement>(null)
     // const isPNG = format.toLowerCase() === 'png';
@@ -78,12 +79,14 @@ const PicChanger: FC<{
                         >
                             裁剪图片
                         </Button>
-                        <Button
-                            className="operate-btn operate-btn-disable"
-                            disabled
-                        >
-                            蒙版
-                        </Button>
+                        {onPick && (
+                            <Button className="operate-btn" onClick={onPick}>
+                                一键抠图
+                            </Button>
+                        )}
+                        {/* <YHButton className="operate-btn operate-btn-disable" disabled>
+              蒙版
+            </YHButton> */}
                     </div>
 
                     {clipVisible && (

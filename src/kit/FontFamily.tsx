@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import { Select } from 'antd'
+import { Select } from '../third-part'
 import { Wrapper } from './style'
 
 const { Option } = Select

@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import { Input } from 'antd'
+import { Input } from '../third-part'
 import { Wrapper } from './style'
 
 // 设置舞台的宽高
