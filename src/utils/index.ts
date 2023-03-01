@@ -20,9 +20,14 @@ const numbericalObjectValues = (obj: any) => {
     }
     const keys = Object.keys(obj)
     keys.forEach((key) => {
-        const current = obj[key]
-        if (!isNaN(current)) {
-            obj[key] = Number(current)
+        // @ts-ignore
+        if (obj[key]) {
+            // @ts-ignore
+            const current = obj[key]
+            if (!isNaN(current)) {
+                // @ts-ignore
+                obj[key] = Number(current)
+            }
         }
     })
     return obj

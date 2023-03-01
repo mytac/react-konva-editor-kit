@@ -1,6 +1,7 @@
 import { FC, useRef, useState } from 'react'
 import { Button } from '../third-part'
-import ClipModal, { ICrop } from './Clip'
+import ClipModal from './Clip'
+import { ICrop } from '../type'
 import { Wrapper } from './style'
 // import bgSvg from './png-bg.svg';
 

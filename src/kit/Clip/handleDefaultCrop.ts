@@ -1,4 +1,4 @@
-import { ICrop } from './index'
+import { ICrop } from '../../type'
 import { to2Decimal } from '../../utils'
 
 // 计算原图和400宽的模态框的缩放比例

@@ -5,21 +5,8 @@ import 'react-image-crop/dist/ReactCrop.css'
 import useImage from 'use-image'
 import { to2Decimal, numbericalObjectValues } from '../../utils'
 import { realCropToShowCrop, showCropToRealCrop } from './handleDefaultCrop'
-// import back from './back.png'
+import { ICrop, IClip } from '../../type'
 import { Wrapper, RightCol } from './style'
-
-export interface ICrop extends Crop {
-    originWidth?: number
-    originHeight?: number
-}
-
-interface IClip {
-    url: string
-    visible: boolean
-    onCancel: () => void
-    onChangeCrop: (a: any) => void
-    defaultCrop?: ICrop
-}
 
 const Clip: FC<IClip> = ({
     url,
@@ -109,6 +96,7 @@ const Clip: FC<IClip> = ({
         }
     }
     return (
+        //@ts-ignore
         <Modal
             width={880}
             title="图片裁剪"

@@ -7,25 +7,28 @@
     "module": "dist/module.js",
     "types": "dist/types.d.ts",
     "scripts": {
+        "build": "tsc -outDir ./dist &&  tsc -module commonjs -outDir ./lib",
         "watch": "parcel watch",
-        "build": "parcel build",
+        "build:parcel": "parcel build",
         "dev:release": "./publish.sh -dev",
+        "prod:release": "./publish.sh -prod",
         "npm-server": "verdaccio"
     },
     "extends": "@tsconfig/recommended/tsconfig.json",
     "author": "",
     "license": "ISC",
     "dependencies": {
-        "@ant-design/icons": "^5.0.1",
-        "antd": "^4.22.7",
+        "@ant-design/icons": "4.6.2",
+        "antd": "4.19.3",
         "konva": "8.2.3",
         "lodash": "^4.17.21",
-        "react": "^18.0.0",
         "react-color": "^2.19.3",
         "react-image-crop": "^10.0.6",
-        "react-konva-editor": "^0.0.1-beta",
-        "styled-components": "^5.3.5",
-        "use-image": "^1.0.12"
+        "styled-components": "5.2.1",
+        "use-image": "1.0.8"
+    },
+    "peerDependencies": {
+        "react": "17.0.1"
     },
     "devDependencies": {
         "@parcel/packager-ts": "^2.8.3",
