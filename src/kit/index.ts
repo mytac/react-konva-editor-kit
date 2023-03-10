@@ -15,6 +15,7 @@ import Effect from './Effect/index'
 // import PsdParse from './PsdParse'; TODO
 import ShortcutTips from './ShortcutTips'
 import Combination from './Combination/index'
+import * as PsdParse from './PsdParse'
 
 export {
     PositionLocker,
@@ -31,7 +32,7 @@ export {
     StageSize,
     LayerLocker,
     Effect,
-    // PsdParse,
+    PsdParse,
     ShortcutTips,
     Combination,
 }
