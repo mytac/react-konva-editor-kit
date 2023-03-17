@@ -1,4 +1,5 @@
-import ShopBag from './shopBag';
-import FontSvg from './font';
+import ShopBag from './shopBag'
+import FontSvg from './font'
+import GroupSvg from './group'
 
-export { ShopBag, FontSvg };
+export { ShopBag, FontSvg, GroupSvg }

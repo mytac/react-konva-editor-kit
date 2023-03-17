@@ -1,5 +1,4 @@
 import { FC, useEffect, useState } from 'react'
-// import { IimageInfo, ItextInfo } from 'react-konva-editor'
 import {
     PictureOutlined,
     ArrowUpOutlined,
@@ -8,16 +7,16 @@ import {
     UnlockFilled,
 } from '@ant-design/icons'
 import { Tooltip } from '../third-part'
-import { FontSvg, ShopBag } from '../icons'
+
+import { FontSvg, ShopBag, GroupSvg } from '../icons'
 
 import { LayerLockerWrapper } from './style'
 import { isNumber } from 'lodash'
 
-// type LayerType = IimageInfo | ItextInfo;
-type LayerType = any
+//TODO: type LayerType = IimageInfo | ItextInfo | IgroupInfo
 
 const LayerLocker: FC<{
-    layers: LayerType[]
+    layers: any[]
     onMoveUp?: () => void
     onMoveDown?: () => void
     onLock?: (i: number) => void
@@ -41,6 +40,7 @@ const LayerLocker: FC<{
 
     useEffect(() => {
         const list = layers.map(
+            // @ts-ignore
             ({ id, value, banDrag, type, mType, elementName }) => ({
                 id,
                 value,
@@ -107,23 +107,23 @@ const LayerLocker: FC<{
                             className="element-icon"
                             onClick={onSelect.bind(null, layer.id)}
                         >
-                            {layer.type === 'image' ? (
-                                layer.mType === 3 ? (
+                            {layer.type === 'image' &&
+                                (layer.mType === 3 ? (
                                     <ShopBag />
                                 ) : (
                                     <PictureOutlined />
-                                )
-                            ) : (
-                                <FontSvg />
-                            )}
+                                ))}
+                            {layer.type === 'text' && <FontSvg />}
+                            {layer.type === 'group' && <GroupSvg />}
                         </div>
                         <div
                             className="element-title"
                             onClick={onSelect.bind(null, layer.id)}
                         >
-                            {layer.type === 'text'
-                                ? layer.value
-                                : layer.elementName || layer.value}
+                            {layer.type === 'group' && layer.elementName}
+                            {layer.type === 'text' && layer.value}
+                            {(layer.type === 'image' && layer.elementName) ||
+                                layer.value}
                         </div>
                         <div className="move">
                             <ArrowUpOutlined
