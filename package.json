@@ -1,6 +1,6 @@
 {
     "name": "react-konva-editor-kit",
-    "version": "1.0.1-beta",
+    "version": "1.0.1-cita",
     "description": "",
     "main": "dist/index.js",
     "source": "./src/index.ts",
