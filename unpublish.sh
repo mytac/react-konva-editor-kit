@@ -22,13 +22,10 @@ else
 fi
 
 echo "REPO=$REPO"
+version=$(jq -r '.version' package.json)
 
-rm -rf ./esm && rm -rf ./lib && yarn build
-echo "【copied!】"
-# npm unpublish react-konva-editor@0.0.2 --force --registry $REPO|| echo "【no need to unpublish】"
-# echo "【unpublished successfully!】"
-npm publish --registry $REPO
-echo "【published!!】"
+npm unpublish react-konva-editor-kit@$version --force --registry $REPO|| echo "【no need to unpublish】"
+echo "【unpublish!!】"
 
 echo $n press any key to exit: $c
 read name
