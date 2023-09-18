@@ -1,4 +1,4 @@
-import { FC, useState, useEffect, useRef } from 'react'
+import React, { FC, useState, useEffect, useRef } from 'react'
 import { Input } from '../third-part'
 import { ChromePicker } from 'react-color'
 import { Wrapper, ColorBlockWrapper } from './style'

@@ -1,4 +1,4 @@
-import { FC, useState, useEffect } from 'react'
+import React, { FC, useState, useEffect } from 'react'
 import ReactCrop, { Crop, PixelCrop, PercentCrop } from 'react-image-crop'
 import { Modal, Input } from 'antd'
 import 'react-image-crop/dist/ReactCrop.css'

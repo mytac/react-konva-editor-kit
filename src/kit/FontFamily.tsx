@@ -1,4 +1,4 @@
-import { FC } from 'react'
+import React, { FC } from 'react'
 import { Select } from '../third-part'
 import { Wrapper } from './style'
 

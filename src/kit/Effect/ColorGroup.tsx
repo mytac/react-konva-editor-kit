@@ -1,4 +1,4 @@
-import { FC, useState, useRef, useEffect } from 'react';
+import React, { FC, useState, useRef, useEffect } from 'react';
 import { ChromePicker } from 'react-color';
 import { EffectColorGroupWrapper } from '../style';
 import { opacityToHexString } from './transform';

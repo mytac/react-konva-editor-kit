@@ -1,4 +1,4 @@
-import { FC, useState, useEffect, useCallback } from 'react'
+import React, { FC, useState, useEffect, useCallback } from 'react'
 import { Slider, Input } from 'antd'
 import { debounce } from 'lodash'
 import { Wrapper } from '../style'

@@ -1,5 +1,5 @@
 /* eslint-disable max-len */
-import { FC } from 'react';
+import React,{ FC } from 'react';
 
 const RepealButton: FC<{ disabled?: boolean; onClick: () => void }> = ({
   disabled = false,

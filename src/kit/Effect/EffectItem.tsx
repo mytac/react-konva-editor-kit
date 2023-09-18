@@ -1,4 +1,4 @@
-import { FC } from 'react'
+import React, { FC } from 'react'
 import { StopOutlined } from '@ant-design/icons'
 import { cssTransform } from './transform'
 // import imgIcon from '../image/image-icon.png'

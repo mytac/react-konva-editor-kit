@@ -1,4 +1,4 @@
-import { FC } from 'react'
+import React, { FC } from 'react'
 import { AlignLeftOutlined } from '@ant-design/icons'
 // import { Iinfo } from '@/components/KonvaCanvas/type';
 import handleAlign, { AlignType } from './aligns'

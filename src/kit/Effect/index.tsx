@@ -1,4 +1,4 @@
-import { FC } from 'react'
+import React, { FC } from 'react'
 import { Select } from 'antd'
 import { FONT_PRESETS, IMAGE_PRESETS } from './configs'
 import EffectItem from './EffectItem'
